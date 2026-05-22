@@ -470,7 +470,7 @@ function Contact() {
               <Phone className="h-4 w-4 text-primary" /> +62 813 8407 2641
             </p>
             <p className="flex items-center gap-3">
-              <Mail className="h-4 w-4 text-primary" /> hello@ediamant.com
+              <Mail className="h-4 w-4 text-primary" /> hello@diamant.com
             </p>
             <p className="flex items-center gap-3">
               <MapPinned className="h-4 w-4 text-primary" /> Jakarta, Indonesia
@@ -546,7 +546,7 @@ function Footer() {
           <p className="font-display tracking-widest text-primary">KONTAK</p>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             <li>+62 813 8407 2641</li>
-            <li>hello@energyz.co</li>
+            <li>hello@diamant.com</li>
           </ul>
         </div>
       </div>
