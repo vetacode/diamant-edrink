@@ -53,6 +53,7 @@ function Nav() {
           <Search className="hidden h-5 w-5 cursor-pointer text-foreground/80 hover:text-primary md:block" />
           <a
             href={wa("Halo EnergyZ! Saya mau pesan, boleh dibantu info produknya?")}
+            target="_blank"
             className="btn-energy cursor-pointer"
           >
             PESAN SEKARANG
@@ -90,6 +91,7 @@ function Hero() {
           </p>
           <a
             href={wa("Halo EnergyZ, saya tertarik mau tahu lebih lanjut tentang produknya.")}
+            target="_blank"
             className="btn-energy mt-8 cursor-pointer"
           >
             HUBUNGI KAMI
@@ -253,6 +255,7 @@ function Nutrition() {
         </div>
         <a
           href={wa("Halo, saya ingin info lebih lanjut tentang varian Citrus Blast.")}
+          target="_blank"
           className="btn-energy mt-7 cursor-pointer"
         >
           PELAJARI LEBIH LANJUT
@@ -313,6 +316,7 @@ function Testimonials() {
           </p>
           <a
             href={wa("Halo, saya juga punya cerita seru bareng EnergyZ!")}
+            target="_blank"
             className="btn-energy mt-6 cursor-pointer"
           >
             LIHAT SEMUA
@@ -365,6 +369,7 @@ function Discount() {
           <h3 className="font-display text-3xl md:text-4xl">DISKON 10% BULAN INI</h3>
           <a
             href={wa("Halo, saya mau ikutan promo diskon 10% bulan ini ya.")}
+            target="_blank"
             className="mt-3 inline-block rounded-lg bg-background px-5 py-2 font-display tracking-widest text-foreground cursor-pointer"
           >
             PESAN SEKARANG
@@ -404,6 +409,7 @@ function Flavors() {
             </p>
             <a
               href={wa(`Halo, saya mau pesan varian ${f.name}.`)}
+              target="_blank"
               className="btn-energy mt-5 cursor-pointer"
             >
               PESAN
