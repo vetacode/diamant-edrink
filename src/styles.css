@@ -1,0 +1,115 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --font-display: "Bebas Neue", "Impact", sans-serif;
+  --font-sans: "Barlow", system-ui, sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.18 0.005 60);
+  --foreground: oklch(0.98 0 0);
+  --surface: oklch(0.22 0.005 60);
+  --surface-2: oklch(0.26 0.008 60);
+  --card: oklch(0.22 0.005 60);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.22 0.005 60);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.78 0.18 55);
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: oklch(0.86 0.19 90);
+  --secondary-foreground: oklch(0.15 0 0);
+  --muted: oklch(0.28 0.006 60);
+  --muted-foreground: oklch(0.72 0.01 60);
+  --accent: oklch(0.78 0.18 55);
+  --accent-foreground: oklch(0.15 0 0);
+  --destructive: oklch(0.6 0.24 27);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.32 0.01 60);
+  --input: oklch(0.28 0.006 60);
+  --ring: oklch(0.78 0.18 55);
+}
+
+.dark { color-scheme: dark; }
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0.02em; }
+}
+
+@utility container-x { max-width: 1200px; margin-inline: auto; padding-inline: 1.25rem; }
+
+@utility chip-tag {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1.25rem;
+  border-radius: 0 0.75rem 0 0.75rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+}
+
+@utility btn-energy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, oklch(0.82 0.19 70), oklch(0.72 0.18 45));
+  color: var(--primary-foreground);
+  padding: 0.875rem 1.75rem;
+  border-radius: 0 0.75rem 0 0.75rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 30px -10px oklch(0.78 0.18 55 / 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@utility btn-energy { &:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -10px oklch(0.78 0.18 55 / 0.7); } }
+
+@utility card-bordered {
+  background: var(--surface);
+  border: 1px solid oklch(0.78 0.18 55 / 0.35);
+  border-radius: 1rem;
+  padding: 1.75rem;
+}
+
+@keyframes float-can { 0%,100% { transform: translateY(0) rotate(-12deg); } 50% { transform: translateY(-18px) rotate(-12deg); } }
+.animate-float { animation: float-can 6s ease-in-out infinite; }
