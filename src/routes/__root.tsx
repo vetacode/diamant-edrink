@@ -88,6 +88,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "icon",
+        href: "https://carisolusi.biz.id/gambarbebas/20260322-102453_logo-diamant-only%20copy.webp",
+      },
     ],
   }),
   shellComponent: RootShell,
