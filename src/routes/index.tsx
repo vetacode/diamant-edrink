@@ -14,8 +14,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATSAPP = "6281384072641";
-const wa = (msg: string) =>
-  `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+const wa = (msg: string) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
 
 function Logo() {
   return (
@@ -52,7 +51,10 @@ function Nav() {
         </nav>
         <div className="flex items-center gap-4">
           <Search className="hidden h-5 w-5 cursor-pointer text-foreground/80 hover:text-primary md:block" />
-          <a href={wa("Halo EnergyZ! Saya mau pesan, boleh dibantu info produknya?")} className="btn-energy cursor-pointer">
+          <a
+            href={wa("Halo EnergyZ! Saya mau pesan, boleh dibantu info produknya?")}
+            className="btn-energy cursor-pointer"
+          >
             PESAN SEKARANG
           </a>
         </div>
@@ -83,10 +85,13 @@ function Hero() {
             <span className="text-foreground/95">SETIAP HARI</span>
           </h1>
           <p className="mt-6 max-w-md text-sm text-muted-foreground">
-            Kafein bersih, vitamin B kompleks, dan elektrolit alami — diracik
-            lembut untuk menemani harimu tanpa rasa berdebar atau drop tiba-tiba.
+            Kafein bersih, vitamin B kompleks, dan elektrolit alami — diracik lembut untuk menemani
+            harimu tanpa rasa berdebar atau drop tiba-tiba.
           </p>
-          <a href={wa("Halo EnergyZ, saya tertarik mau tahu lebih lanjut tentang produknya.")} className="btn-energy mt-8 cursor-pointer">
+          <a
+            href={wa("Halo EnergyZ, saya tertarik mau tahu lebih lanjut tentang produknya.")}
+            className="btn-energy mt-8 cursor-pointer"
+          >
             HUBUNGI KAMI
           </a>
         </div>
@@ -95,7 +100,9 @@ function Hero() {
           <div
             aria-hidden
             className="absolute h-72 w-72 rounded-full opacity-70 blur-2xl md:h-96 md:w-96"
-            style={{ background: "radial-gradient(circle, oklch(0.78 0.18 55 / 0.45), transparent 70%)" }}
+            style={{
+              background: "radial-gradient(circle, oklch(0.78 0.18 55 / 0.45), transparent 70%)",
+            }}
           />
           <img
             src={heroCan}
@@ -108,7 +115,12 @@ function Hero() {
           <span className="chip-tag">VARIAN CITRUS BLAST</span>
           <p className="mt-5 font-display text-4xl md:text-5xl">Rp 65.000</p>
           <div className="relative mt-5 overflow-hidden rounded-xl border border-primary/40 cursor-pointer">
-            <img src={athlete} alt="Atlet menikmati EnergyZ" loading="lazy" className="h-44 w-full object-cover" />
+            <img
+              src={athlete}
+              alt="Atlet menikmati EnergyZ"
+              loading="lazy"
+              className="h-44 w-full object-cover"
+            />
             <div className="absolute inset-0 flex items-center justify-center bg-black/30">
               <div className="rounded-full border-2 border-white/80 bg-black/30 p-3">
                 <Play className="h-6 w-6 fill-white text-white" />
@@ -146,21 +158,28 @@ function About() {
         <div
           aria-hidden
           className="absolute -inset-4 rounded-3xl opacity-50 blur-2xl"
-          style={{ background: "radial-gradient(circle, oklch(0.78 0.18 55 / 0.4), transparent 70%)" }}
+          style={{
+            background: "radial-gradient(circle, oklch(0.78 0.18 55 / 0.4), transparent 70%)",
+          }}
         />
-        <img src={aboutCans} alt="Dua kaleng EnergyZ" loading="lazy" className="relative rounded-2xl border border-primary/30" />
+        <img
+          src={aboutCans}
+          alt="Dua kaleng EnergyZ"
+          loading="lazy"
+          className="relative rounded-2xl border border-primary/30"
+        />
       </div>
       <div>
         <span className="chip-tag">TENTANG KAMI</span>
         <h2 className="mt-4 font-display text-4xl md:text-5xl">
           MENEMANI HARIMU,
-          <br />MENGHIDUPKAN SEMANGATMU
+          <br />
+          MENGHIDUPKAN SEMANGATMU
         </h2>
         <p className="mt-5 text-muted-foreground">
-          EnergyZ lahir dari semangat untuk hidup lebih aktif. Dibuat dengan
-          kafein bersih, elektrolit, dan ekstrak alami — pas untuk kamu yang
-          aktif berolahraga, kerja kreatif, atau menikmati malam panjang
-          bersama teman.
+          EnergyZ lahir dari semangat untuk hidup lebih aktif. Dibuat dengan kafein bersih,
+          elektrolit, dan ekstrak alami — pas untuk kamu yang aktif berolahraga, kerja kreatif, atau
+          menikmati malam panjang bersama teman.
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           {[
@@ -185,7 +204,9 @@ function MoreFlavor() {
       <div className="container-x flex flex-col items-center justify-between gap-6 md:flex-row">
         <div>
           <p className="font-display text-xs tracking-widest opacity-80">VARIAN</p>
-          <h3 className="font-display text-3xl md:text-4xl">LEBIH BANYAK RASA, LEBIH BANYAK PILIHAN</h3>
+          <h3 className="font-display text-3xl md:text-4xl">
+            LEBIH BANYAK RASA, LEBIH BANYAK PILIHAN
+          </h3>
         </div>
         <div className="flex gap-4">
           {["GREEN APPLE RUSH", "MIXED BERRY BLAST"].map((f) => (
@@ -205,14 +226,18 @@ function MoreFlavor() {
 function Nutrition() {
   return (
     <section id="product" className="container-x grid items-center gap-10 py-20 md:grid-cols-2">
-      <img src={flavorsTrio} alt="Tiga varian rasa" loading="lazy" className="rounded-2xl border border-primary/30" />
+      <img
+        src={flavorsTrio}
+        alt="Tiga varian rasa"
+        loading="lazy"
+        className="rounded-2xl border border-primary/30"
+      />
       <div>
         <span className="chip-tag">KOMPOSISI</span>
         <h2 className="mt-4 font-display text-4xl md:text-5xl">VARIAN CITRUS BLAST</h2>
         <p className="mt-4 text-muted-foreground">
-          Sensasi jeruk segar berpadu dengan kafein bersih dan vitamin B
-          kompleks. Diracik dengan ekstrak alami dan elektrolit untuk energi
-          yang terasa halus, tanpa kejutan di tengah hari.
+          Sensasi jeruk segar berpadu dengan kafein bersih dan vitamin B kompleks. Diracik dengan
+          ekstrak alami dan elektrolit untuk energi yang terasa halus, tanpa kejutan di tengah hari.
         </p>
         <div className="mt-6 grid grid-cols-3 gap-3">
           {[
@@ -226,7 +251,10 @@ function Nutrition() {
             </div>
           ))}
         </div>
-        <a href={wa("Halo, saya ingin info lebih lanjut tentang varian Citrus Blast.")} className="btn-energy mt-7 cursor-pointer">
+        <a
+          href={wa("Halo, saya ingin info lebih lanjut tentang varian Citrus Blast.")}
+          className="btn-energy mt-7 cursor-pointer"
+        >
           PELAJARI LEBIH LANJUT
         </a>
       </div>
@@ -239,10 +267,12 @@ function Clients() {
     <section className="bg-surface py-20">
       <div className="container-x text-center">
         <span className="chip-tag">MITRA KAMI</span>
-        <h2 className="mt-4 font-display text-4xl md:text-5xl">DIPERCAYA OLEH MITRA DI BERBAGAI NEGARA</h2>
+        <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          DIPERCAYA OLEH MITRA DI BERBAGAI NEGARA
+        </h2>
         <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
-          Hadir di 20+ negara — mulai dari minimarket di Tokyo, gym di Berlin,
-          hingga stadion di São Paulo.
+          Hadir di 20+ negara — mulai dari minimarket di Tokyo, gym di Berlin, hingga stadion di São
+          Paulo.
         </p>
         <div className="relative mx-auto mt-10 aspect-[2/1] max-w-3xl rounded-2xl border border-border bg-background/60 p-8">
           <svg viewBox="0 0 800 400" className="h-full w-full opacity-40">
@@ -278,17 +308,28 @@ function Testimonials() {
           <span className="chip-tag">TESTIMONI</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">CERITA DARI MEREKA</h2>
           <p className="mt-4 text-muted-foreground">
-            Cerita nyata dari para atlet, gamer, dan kreator yang menjadikan
-            EnergyZ teman energi sehari-hari.
+            Cerita nyata dari para atlet, gamer, dan kreator yang menjadikan EnergyZ teman energi
+            sehari-hari.
           </p>
-          <a href={wa("Halo, saya juga punya cerita seru bareng EnergyZ!")} className="btn-energy mt-6 cursor-pointer">
+          <a
+            href={wa("Halo, saya juga punya cerita seru bareng EnergyZ!")}
+            className="btn-energy mt-6 cursor-pointer"
+          >
             LIHAT SEMUA
           </a>
         </div>
         <div className="grid gap-5">
           {[
-            ["Maya Putri", "Atlet Crossfit", "EnergyZ jadi pendamping latihan pagi saya. Rasanya pas, energinya stabil dari awal sampai akhir sesi."],
-            ["Daniel Chen", "Pemain Esports", "Citrus Blast bikin fokus tetap terjaga saat turnamen panjang. Rasanya juga enak banget, jadi favorit baru."],
+            [
+              "Maya Putri",
+              "Atlet Crossfit",
+              "EnergyZ jadi pendamping latihan pagi saya. Rasanya pas, energinya stabil dari awal sampai akhir sesi.",
+            ],
+            [
+              "Daniel Chen",
+              "Pemain Esports",
+              "Citrus Blast bikin fokus tetap terjaga saat turnamen panjang. Rasanya juga enak banget, jadi favorit baru.",
+            ],
           ].map(([n, r, q]) => (
             <div key={n} className="card-bordered">
               <Quote className="mb-3 h-6 w-6 text-primary" />
@@ -313,11 +354,19 @@ function Discount() {
           <p className="font-display text-xl tracking-wide">GREEN APPLE RUSH</p>
           <p className="text-xs text-muted-foreground">Segar, sedikit asam, bikin melek.</p>
         </div>
-        <img src={discountCans} alt="Promo kaleng EnergyZ" loading="lazy" className="h-32 w-32 rounded-xl object-cover" />
+        <img
+          src={discountCans}
+          alt="Promo kaleng EnergyZ"
+          loading="lazy"
+          className="h-32 w-32 rounded-xl object-cover"
+        />
         <div className="text-right">
           <p className="font-display text-xs tracking-widest opacity-80">PROMO</p>
           <h3 className="font-display text-3xl md:text-4xl">DISKON 10% BULAN INI</h3>
-          <a href={wa("Halo, saya mau ikutan promo diskon 10% bulan ini ya.")} className="mt-3 inline-block rounded-lg bg-background px-5 py-2 font-display tracking-widest text-foreground cursor-pointer">
+          <a
+            href={wa("Halo, saya mau ikutan promo diskon 10% bulan ini ya.")}
+            className="mt-3 inline-block rounded-lg bg-background px-5 py-2 font-display tracking-widest text-foreground cursor-pointer"
+          >
             PESAN SEKARANG
           </a>
         </div>
@@ -339,12 +388,26 @@ function Flavors() {
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {items.map((f) => (
           <div key={f.name} className="card-bordered text-left">
-            <p className="font-display tracking-widest text-primary">SERI {f.name.split(" ")[0].toUpperCase()}</p>
+            <p className="font-display tracking-widest text-primary">
+              SERI {f.name.split(" ")[0].toUpperCase()}
+            </p>
             <p className="mt-1 font-display text-3xl">Rp {f.price}</p>
-            <img src={f.img} alt={f.name} loading="lazy" className="mx-auto my-6 h-56 w-auto rounded-xl object-cover" />
+            <img
+              src={f.img}
+              alt={f.name}
+              loading="lazy"
+              className="mx-auto my-6 h-56 w-auto rounded-xl object-cover"
+            />
             <p className="font-display text-xl">{f.name}</p>
-            <p className="mt-1 text-xs text-muted-foreground">Rasa berani, energi nyata, tanpa kompromi.</p>
-            <a href={wa(`Halo, saya mau pesan varian ${f.name}.`)} className="btn-energy mt-5 cursor-pointer">PESAN</a>
+            <p className="mt-1 text-xs text-muted-foreground">
+              Rasa berani, energi nyata, tanpa kompromi.
+            </p>
+            <a
+              href={wa(`Halo, saya mau pesan varian ${f.name}.`)}
+              className="btn-energy mt-5 cursor-pointer"
+            >
+              PESAN
+            </a>
           </div>
         ))}
       </div>
@@ -356,7 +419,10 @@ function Blog() {
   const posts = [
     ["CERITA POSITIF DARI PELANGGAN KAMI", "Kenapa komunitas EnergyZ terus tumbuh."],
     ["FORMULA BARU YANG SEGAR & SEIMBANG", "Intip dapur racikan di balik setiap kaleng EnergyZ."],
-    ["MENGENAL MINUMAN ENERGI LEBIH DEKAT", "Kafein, taurin, dan cerita di balik energi yang bersih."],
+    [
+      "MENGENAL MINUMAN ENERGI LEBIH DEKAT",
+      "Kafein, taurin, dan cerita di balik energi yang bersih.",
+    ],
   ];
   return (
     <section id="blog" className="container-x py-20">
@@ -365,7 +431,9 @@ function Blog() {
           <span className="chip-tag">CERITA</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">KABAR TERBARU KAMI</h2>
         </div>
-        <a href="#contact" className="btn-energy w-fit cursor-pointer">BACA SEMUA</a>
+        <a href="#contact" className="btn-energy w-fit cursor-pointer">
+          BACA SEMUA
+        </a>
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {posts.map(([t, d]) => (
@@ -388,14 +456,19 @@ function Contact() {
           <span className="chip-tag">KONTAK</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">YUK, NGOBROL BARENG KAMI</h2>
           <p className="mt-4 text-muted-foreground">
-            Mau jadi reseller, kerja sama, atau sekadar tanya-tanya? Klik
-            tombol di bawah untuk ngobrol langsung lewat WhatsApp — kami
-            dengan senang hati membantu.
+            Mau jadi reseller, kerja sama, atau sekadar tanya-tanya? Klik tombol di bawah untuk
+            ngobrol langsung lewat WhatsApp — kami dengan senang hati membantu.
           </p>
           <div className="mt-6 space-y-3 text-sm">
-            <p className="flex items-center gap-3"><Phone className="h-4 w-4 text-primary" /> +62 813 8407 2641</p>
-            <p className="flex items-center gap-3"><Mail className="h-4 w-4 text-primary" /> hello@energyz.co</p>
-            <p className="flex items-center gap-3"><MapPinned className="h-4 w-4 text-primary" /> Jakarta, Indonesia</p>
+            <p className="flex items-center gap-3">
+              <Phone className="h-4 w-4 text-primary" /> +62 813 8407 2641
+            </p>
+            <p className="flex items-center gap-3">
+              <Mail className="h-4 w-4 text-primary" /> hello@energyz.co
+            </p>
+            <p className="flex items-center gap-3">
+              <MapPinned className="h-4 w-4 text-primary" /> Jakarta, Indonesia
+            </p>
           </div>
         </div>
         <form
@@ -408,9 +481,26 @@ function Contact() {
           className="card-bordered space-y-4"
         >
           <p className="font-display text-xl tracking-wide">TINGGALKAN PESAN</p>
-          <input name="name" required placeholder="Nama lengkap" className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" />
-          <input name="email" type="email" required placeholder="Alamat email" className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" />
-          <textarea name="message" required rows={5} placeholder="Ceritakan kebutuhanmu di sini..." className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary" />
+          <input
+            name="name"
+            required
+            placeholder="Nama lengkap"
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
+          />
+          <input
+            name="email"
+            type="email"
+            required
+            placeholder="Alamat email"
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
+          />
+          <textarea
+            name="message"
+            required
+            rows={5}
+            placeholder="Ceritakan kebutuhanmu di sini..."
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary"
+          />
           <button type="submit" className="btn-energy cursor-pointer">
             <Check className="h-4 w-4" /> KIRIM VIA WHATSAPP
           </button>
@@ -426,7 +516,9 @@ function Footer() {
       <div className="container-x grid gap-8 md:grid-cols-4">
         <div>
           <Logo />
-          <p className="mt-3 text-xs text-muted-foreground">Energi baru, semangat baru, setiap hari.</p>
+          <p className="mt-3 text-xs text-muted-foreground">
+            Energi baru, semangat baru, setiap hari.
+          </p>
         </div>
         <div>
           <p className="font-display tracking-widest text-primary">TAUTAN CEPAT</p>
@@ -439,7 +531,9 @@ function Footer() {
         <div>
           <p className="font-display tracking-widest text-primary">MITRA KAMI</p>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li>Atlet</li><li>Gamer</li><li>Toko & Reseller</li>
+            <li>Atlet</li>
+            <li>Gamer</li>
+            <li>Toko & Reseller</li>
           </ul>
         </div>
         <div>
@@ -450,7 +544,9 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <p className="container-x mt-8 text-center text-xs text-muted-foreground">© {new Date().getFullYear()} EnergyZ. Hak cipta dilindungi.</p>
+      <p className="container-x mt-8 text-center text-xs text-muted-foreground">
+        © {new Date().getFullYear()} EnergyZ. Hak cipta dilindungi.
+      </p>
     </footer>
   );
 }

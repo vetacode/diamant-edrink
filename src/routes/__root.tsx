@@ -73,7 +73,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "EnergyZ — Unleash Your Power, Fuel Your Energy" },
-      { name: "description", content: "EnergyZ energy drink. Bold flavors, real fuel. Citrus Blast, Green Apple Rush, Mixed Berry Blast." },
+      {
+        name: "description",
+        content:
+          "EnergyZ energy drink. Bold flavors, real fuel. Citrus Blast, Green Apple Rush, Mixed Berry Blast.",
+      },
       { property: "og:title", content: "EnergyZ — Fuel Your Energy" },
       { property: "og:description", content: "Bold flavors, real fuel. Order on WhatsApp." },
       { property: "og:type", content: "website" },
