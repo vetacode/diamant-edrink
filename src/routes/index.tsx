@@ -464,7 +464,7 @@ function Contact() {
               <Phone className="h-4 w-4 text-primary" /> +62 813 8407 2641
             </p>
             <p className="flex items-center gap-3">
-              <Mail className="h-4 w-4 text-primary" /> hello@energyz.co
+              <Mail className="h-4 w-4 text-primary" /> hello@ediamant.com
             </p>
             <p className="flex items-center gap-3">
               <MapPinned className="h-4 w-4 text-primary" /> Jakarta, Indonesia
@@ -475,7 +475,7 @@ function Contact() {
           onSubmit={(e) => {
             e.preventDefault();
             const f = new FormData(e.currentTarget);
-            const msg = `Halo EnergyZ!%0A%0ANama: ${f.get("name")}%0AEmail: ${f.get("email")}%0A%0A${f.get("message")}`;
+            const msg = `Halo Diamant EnergyZ!%0A%0ANama: ${f.get("name")}%0AEmail: ${f.get("email")}%0A%0A${f.get("message")}`;
             window.open(`https://wa.me/${WHATSAPP}?text=${msg}`, "_blank");
           }}
           className="card-bordered space-y-4"
@@ -545,7 +545,7 @@ function Footer() {
         </div>
       </div>
       <p className="container-x mt-8 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} EnergyZ. Hak cipta dilindungi.
+        © {new Date().getFullYear()} Diamant EnergyZ. Hak cipta dilindungi.
       </p>
     </footer>
   );
