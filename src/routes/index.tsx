@@ -121,7 +121,7 @@ function Hero() {
               src={athlete}
               alt="Atlet menikmati EnergyZ"
               loading="lazy"
-              className="h-44 w-full object-cover"
+              className="h-82 w-full object-cover"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black/30">
               <div className="rounded-full border-2 border-white/80 bg-black/30 p-3">
