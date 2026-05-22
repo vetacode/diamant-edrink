@@ -72,7 +72,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "EnergyZ — Unleash Your Power, Fuel Your Energy" },
+      { title: "EnergyZ • Energi Baru Setiap Hari" },
       {
         name: "description",
         content:
